@@ -21,12 +21,13 @@ html, body {
       transform: translate(-50%, -50%);
     }
   
-    #line {
-      position: absolute;
-      width: 200px;
-      height: 2px;
-      background: #000;
-      left: 0;              
-      top: 0;
-      transform-origin: center;
-    }
+   #line {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 200px;
+  height: 2px;
+  background: #000000;
+  transform: translate(-50%, -50%) rotate(0deg); 
+  transform-origin: center center;
+}
