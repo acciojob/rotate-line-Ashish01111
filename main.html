@@ -2,43 +2,39 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Rotating Line</title>
-    <style>
-        body {
-            height: 100%;
-            margin: 0;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rotating Line</title>
+  <style>
+    body {
+      height: 100%;
+      margin: 0;
+    }
 
-        #line {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            width: 200px;
-            height: 2px;
-            background: #000000;
-            
-        }
-    </style>
+    #line {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 200px;
+      height: 2px;
+      background: #000000;
+      transform-origin: center;
+    }
+  </style>
 </head>
 
 <body>
-    <div id="line"></div>
-    
+  <div id="line"></div>
 
-    <script>
-        const line = document.getElementById('line')
-        let rotate = 0
-        setInterval(() => {
-            rotate += 2
-            console.log(rotate);
-            
-            line.style.transform = translate(-50%, -50%) rotate(${rotate}deg)
-            
-            
-        }, 20)
-    </script>
+  <script>
+    const line = document.getElementById('line');
+    let rotate = 0;
+
+    setInterval(() => {
+      rotate += 2;
+      line.style.transform = `translate(-50%, -50%) rotate(${rotate}deg)`;
+    }, 20);
+  </script>
 </body>
 
 </html>
